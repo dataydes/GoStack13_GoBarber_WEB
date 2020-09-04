@@ -78,6 +78,7 @@ svg{
         &:hover{
             color: ${shade(0.2, '#FF9000')};
 }
+}
 `;
 
 export const Background = styled.div`
