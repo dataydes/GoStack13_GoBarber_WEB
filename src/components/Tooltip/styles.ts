@@ -15,7 +15,7 @@ span{
     visibility:hidden;
 
     position:absolute;
-    bottom:calc(100% +12px);
+    bottom:calc(100% + 12px);
     left:50%;
     transform: translateX(-50%);
 

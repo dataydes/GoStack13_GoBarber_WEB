@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes, useEffect, useRef, useState, useCallback } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { useField } from '@unform/core';
-import { Container,Error } from './styles';
+import { Container, Error } from './styles';
 import { FiAlertCircle } from 'react-icons/fi';
 
 
@@ -39,13 +39,13 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
                 onBlur={handleInputBluer}
                 defaultValue={defaultValue}
                 ref={inputRef}
-
-
-                {...rest} />
-            <Error title={error}>
-                {error && <FiAlertCircle color="#c53030" size={20} />}
-            </Error>
-
+                {...rest}
+            />
+            {error && (
+                <Error title={error}>
+                    <FiAlertCircle color="#c53030" size={20} />
+                </Error>
+            )}
 
         </Container>
     );
