@@ -1,11 +1,12 @@
-import React from 'react';
-import { Container, Header, HeaderContent, Profile, Content, Schedule, Calendar, NextAppointment } from './styles';
+import React, { useState } from 'react';
+import { Container, Header, HeaderContent, Profile, Content, Schedule, Calendar, NextAppointment, Section, Appointment } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import { FiClock, FiPower } from 'react-icons/fi';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const { signOut, user } = useAuth();
   return (
     <Container>
@@ -49,6 +50,25 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+          <Section>
+            <strong>Manhã</strong>
+            <Appointment>
+              <span>
+                <FiClock /> 08:00
+                </span>
+              <div>
+                <img src="https://avatars2.githubusercontent.com/u/2475990?s=460&u=1c752f20310ae6c7d320843ee89260d1f82c5bce&v=4"
+                  alt="Daniel Ataydes" />
+                <strong>Daniel Ataydes</strong>
+              </div>
+
+
+            </Appointment>
+          </Section>
+          <Section>
+            <strong>Tarde</strong>
+            <Appointment></Appointment>
+          </Section>
         </Schedule>
         <Calendar></Calendar>
       </Content>
