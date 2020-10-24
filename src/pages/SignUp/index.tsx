@@ -16,7 +16,7 @@ import { useToast } from '../../hooks/toast';
 interface SignUpFormData {
     name: string;
     email: string;
-    passwords: string;
+    password: string;
 }
 
 const SignUp: React.FC = () => {
