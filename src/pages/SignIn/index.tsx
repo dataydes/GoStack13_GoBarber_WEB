@@ -77,7 +77,7 @@ const SignIn: React.FC = () => {
                     <img src={logoImg} alt="GoBarber" />
                     <Form ref={formRef} onSubmit={handleSubmit}>
                         <h1>Faça seu logon</h1>
-                        <Input name="email" icon={FiMail} placeholder="Email" />
+                        <Input name="email" icon={FiMail} placeholder="E-mail" />
                         <Input name="password" icon={FiMail} type="password" placeholder="Senha" />
                         <Button type="submit">Entrar</Button>
                         <Link to="/forgot-password">Esqueci minha senha</Link>
